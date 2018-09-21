@@ -9,41 +9,46 @@
         <section>
             <h1>Popular Products</h1>
             <h:form>
-                <section class="product-summary">
-                    <img src="resources/musicshop/images/microphone-120x120.jpg" alt="Microphone"/>
-                    <h2>Microphone</h2>
-                    <p>Essential for every vocalist - this microphone makes your voice sound great.</p>
-                    <p>Price: $ 95.00 - <h:commandLink>Add to cart</h:commandLink></p>
-                    <p><h:outputLink value="product-details.xhtml">Product Details</h:outputLink></p>
-                </section>
-                <section class="product-summary">
-                    <img src="resources/musicshop/images/guitar-120x120.jpg" alt="Guitar"/>
-                    <h2>Guitar</h2>
-                    <p>This guitar sounds great and looks cool.</p>
-                    <p>Price: $ 995.00 - <h:commandLink>Add to cart</h:commandLink></p>
-                    <p><h:outputLink value="product-details.xhtml">Product Details</h:outputLink></p>
-                </section>
-                <section class="product-summary">
-                    <img src="resources/musicshop/images/saxophone-120x120.jpg" alt="Saxophone"/>
-                    <h2>Saxophone</h2>
-                    <p>Steal the show with this cool saxophone.</p>
-                    <p>Price: $ 1195.00 - <h:commandLink>Add to cart</h:commandLink></p>
-                    <p><h:outputLink value="product-details.xhtml">Product Details</h:outputLink></p>
-                </section>
-                <section class="product-summary">
-                    <img src="resources/musicshop/images/bassguitar-120x120.jpg" alt="Bass Guitar"/>
-                    <h2>Bass Guitar</h2>
-                    <p>Every band needs a solid bass guitar.</p>
-                    <p>Price: $ 895.00 - <h:commandLink>Add to cart</h:commandLink></p>
-                    <p><h:outputLink value="product-details.xhtml">Product Details</h:outputLink></p>
-                </section>
-                <section class="product-summary">
-                    <img src="resources/musicshop/images/drumkit-120x120.jpg" alt="Drum Kit"/>
-                    <h2>Drum Kit</h2>
-                    <p>This complete drum kit provides everything a drummer needs.</p>
-                    <p>Price: $ 1249.00 - <h:commandLink>Add to cart</h:commandLink></p>
-                    <p><h:outputLink value="product-details.xhtml">Product Details</h:outputLink></p>
-                </section>
+                 <ui:decorate template="/templates/product-summary.xhtml">
+                    <ui:param name="imageName" value="microphone"/>
+                    <ui:param name="productName" value="Microphone"/>
+                    <ui:param name="productPrice" value="95.00"/>
+                    <ui:define name="product-description">
+                        <p>Essential for every vocalist - this microphone makes your voice sound great.</p>
+                    </ui:define>
+                </ui:decorate>
+                <ui:decorate template="/templates/product-summary.xhtml">
+                    <ui:param name="imageName" value="guitar"/>
+                    <ui:param name="productName" value="Guitar"/>
+                    <ui:param name="productPrice" value="995.00"/>
+                    <ui:define name="product-description">
+                        <p>This guitar sounds great and looks cool.</p>
+                    </ui:define>
+                </ui:decorate>
+                <ui:decorate template="/templates/product-summary.xhtml">
+                    <ui:param name="imageName" value="saxophone"/>
+                    <ui:param name="productName" value="Saxophone"/>
+                    <ui:param name="productPrice" value="1195.00"/>
+                    <ui:define name="product-description">
+                        <p>Steal the show with this cool saxophone.</p>
+                    </ui:define>
+                </ui:decorate>
+                <ui:decorate template="/templates/product-summary.xhtml">
+                    <ui:param name="imageName" value="bassguitar"/>
+                    <ui:param name="productName" value="Bass Guitar"/>
+                    <ui:param name="productPrice" value="895.00"/>
+                    <ui:define name="product-description">
+                        <p>Every band needs a solid bass guitar.</p>
+                    </ui:define>
+                </ui:decorate>
+                <ui:decorate template="/templates/product-summary.xhtml">
+                    <ui:param name="imageName" value="drumkit"/>
+                    <ui:param name="productName" value="Drum Kit"/>
+                    <ui:param name="productPrice" value="1249.00"/>
+                    <ui:define name="product-description">
+                        <p>This complete drum kit provides everything a drummer needs.</p>
+                    </ui:define>
+                </ui:decorate>
             </h:form>
         </section>
     </ui:define>
