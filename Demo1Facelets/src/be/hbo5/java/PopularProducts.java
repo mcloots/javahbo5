@@ -10,6 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  *
@@ -17,6 +18,7 @@ import javax.inject.Inject;
  */
 @ManagedBean
 @RequestScoped
+@Named("popularProducts")
 public class PopularProducts {
     
     @Inject

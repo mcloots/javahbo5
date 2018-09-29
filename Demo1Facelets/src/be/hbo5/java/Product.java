@@ -11,11 +11,11 @@ package be.hbo5.java;
  * @author Michaël
  */
 public class Product {
-    private final long id;
-    private final String name;
-    private final String description;
-    private final double price;
-    private final String imageName;
+    private long id;
+    private String name;
+    private String description;
+    private double price;
+    private String imageName;
 
     public Product(long id, String name, String description, double price, String imageName) {
         this.id = id;
@@ -24,6 +24,8 @@ public class Product {
         this.price = price;
         this.imageName = imageName;
     }
+    
+    public Product() {}
 
     public long getId() {
         return id;
